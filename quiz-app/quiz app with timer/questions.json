@@ -1,0 +1,57 @@
+[
+  {
+    "number": 1,
+    "question": "What does the HTML stand for ?",
+    "answer": "Hyper Text Markup Language",
+    "option": [
+      "Hyper Text preprocessor",
+      "Hyper Text Markup Language",
+      "Hyper Text Multiple Language",
+      "Hyper tool Multi Language"
+    ]
+  },
+  {
+    "number": 2,
+    "question": "what does CSS stand for ?",
+    "answer": "Cascade style sheet",
+    "option": [
+      "common style sheet",
+      "colorful style sheet",
+      "computer style sheet",
+      "Cascade style sheet"
+    ]
+  },
+  {
+    "number": 3,
+    "question": "What does PHP Stand for ?",
+    "answer": "computer style sheet",
+    "option": [
+      "common style sheet",
+      "colorful style sheet",
+      "computer style sheet",
+      "Cascade style sheet"
+    ]
+  },
+  {
+    "number": 4,
+    "question": "what does SQL stand for ?",
+    "answer": "Structured Query Language",
+    "option": [
+      "Styling Question Language",
+      "style sheet query Language",
+      "Statement Question Language",
+      "Structured Query Language"
+    ]
+  },
+  {
+    "number": 5,
+    "question": "what does XML stand for ?",
+    "answer": "extensible Markup Language",
+    "option": [
+      "extensible Markup Language",
+      "Executable Multiple Language",
+      "Extra multi-program Language",
+      "Examine Multiple language"
+    ]
+  }
+]

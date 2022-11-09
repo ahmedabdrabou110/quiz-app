@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #007fbb;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.start_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.start_button button {
+  background-color: #fff;
+  padding: 15px 30px;
+  color: #007fbb;
+  font-size: 25px;
+  font-weight: bolder;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: hover 0.6s ease-in-out;
+}
+.start_button button:hover {
+  background-color: #1a5d7c;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.info_app {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  width: 580px;
+  max-width: 100%;
+}
+.info_app.infoApp {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.info_app .info_title {
+  height: 60px;
+  border-bottom: 1px solid gray;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info_app .info_list {
+  padding: 0 35px;
+  margin: 20px 0;
+}
+.info_app .info_list .info {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.info_app .info_list .buttons {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid gray;
+}
+.info_app .info_list .buttons button {
+  margin: 0 5px;
+  height: 50px;
+  width: 130px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: hover 0.5s ease;
+}
+.info_app .info_list .buttons button.restart {
+  background-color: #007fbb;
+}
+.info_app .info_list .buttons button.restart:hover {
+  background-color: #1a5d7c;
+}
+.info_app .info_list .buttons button.exit {
+  background-color: #fff;
+  color: #007fbb;
+  border: 1px solid #007fbb;
+}
+.info_app .info_list .buttons button.exit:hover {
+  background-color: #007fbb;
+  color: #fff;
+}
+
+.quiz-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 550px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.quiz-app.activeQuiz {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  pointer-events: auto;
+}
+.quiz-app header {
+  position: relative;
+  padding: 0 35px;
+  border-radius: 5px 5px 0 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.quiz-app header .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.quiz-app header .timer {
+  display: flex;
+  width: 145px;
+  height: 45px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007fbb;
+  padding: 0 8px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.quiz-app header .timer .timer_text {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+.quiz-app header .timer .timer_seconds {
+  width: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bolder;
+  color: #007fbb;
+}
+.quiz-app header .timeLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #007fbb;
+  height: 3px;
+}
+.quiz-app section {
+  padding: 20px 30px 25px 30px;
+}
+.quiz-app section .question_text {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.quiz-app section .option_list {
+  display: block;
+  padding: 20px 0;
+}
+.quiz-app section .option_list .option {
+  background-color: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 0.5s ease;
+}
+.quiz-app section .option_list .option.correct {
+  background-color: #61b661;
+  border-color: #239023;
+  color: #fff;
+}
+.quiz-app section .option_list .option.incorrect {
+  background-color: #af4e5d;
+  border-color: #a4283a;
+  color: #fff;
+}
+.quiz-app section .option_list .option.disabled {
+  pointer-events: none;
+}
+.quiz-app section .option_list .option span {
+  font-size: 17px;
+  font-weight: 500;
+}
+.quiz-app section .option_list .option:hover {
+  background-color: #cceeff;
+  border: 1px solid #004085;
+}
+.quiz-app section .option_list .option:last-child {
+  margin-bottom: 0;
+}
+.quiz-app section .option_list .option .trick svg {
+  position: relative;
+  top: 5px;
+  z-index: 5;
+  fill: #239023;
+  border-color: #239023;
+}
+.quiz-app section .option_list .option .cross svg {
+  position: relative;
+  top: 5px;
+  z-index: 5;
+  fill: #a4283a;
+  border-color: #a4283a;
+}
+.quiz-app footer {
+  border-top: 1px solid gray;
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quiz-app footer .total_questions span {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.quiz-app footer .total_questions span p {
+  padding: 0 5px;
+  font-weight: bolder;
+  color: #007fbb;
+}
+.quiz-app footer button {
+  display: none;
+  padding: 10px 15px;
+  background-color: #007fbb;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.quiz-app footer button:hover {
+  background-color: #1a5d7c;
+}
+
+.result_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 440px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.result_box.activeResultQuiz {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.result_box .icon svg {
+  fill: #f9a602;
+}
+.result_box .complete_text {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 10px;
+}
+.result_box .score_text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.result_box .score_text span {
+  display: flex;
+}
+.result_box .score_text span p {
+  padding: 0 4px;
+  color: #007fbb;
+}
+.result_box .buttons {
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.result_box .buttons button {
+  margin: 0 5px;
+  height: 50px;
+  width: 130px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: hover 0.5s ease;
+}
+.result_box .buttons button.restart {
+  background-color: #007fbb;
+}
+.result_box .buttons button.restart:hover {
+  background-color: #1a5d7c;
+}
+.result_box .buttons button.quit {
+  background-color: #fff;
+  color: #007fbb;
+  border: 1px solid #007fbb;
+}
+.result_box .buttons button.quit:hover {
+  background-color: #007fbb;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

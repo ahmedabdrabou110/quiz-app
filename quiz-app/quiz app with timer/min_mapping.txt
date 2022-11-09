@@ -1,0 +1,15 @@
+[1] :- Create JSON Object for questions
+[2] :- Start Creating HTML Startup
+[3] :- Add Dummy Data
+[4] :- Creating the styling
+[5] :- Fetch Number of questions From JSON Object
+[6] :- Show Questions Count + Question Category
+[7] :- Show the number of bullet Depend on Question Count 
+[8] :- Set the number For the right and wrong Answer 
+[9] :- create countdown Timer 
+[10] :- Fetch the question fro JSON
+[11] :- Show the First Question 
+[12] :- Check Answer and Hide Question then show Next One 
+[13] :- If the Time End Mark the question as wrong and show Next Question 
+[14] :- Add class on Bullet After Answering the Question 
+[15] :- If Questions Finished Questions show The result 
